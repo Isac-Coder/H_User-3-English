@@ -9,10 +9,10 @@ else:
 with open("database.txt", "r") as file:
     contador = len(file.readlines())
 
-os.system("cls")
+os.system('cls' if os.name == 'nt' else 'clear')
 while True:
-    print("Write to exit to close the program")
-    blocker = input("Enter your daily blocker:\n# ")
+    print("\nWrite to exit to close the program")
+    blocker = input("\nEnter your daily blocker:\n# ")
 
     if blocker.lower() == "exit":
         break
@@ -26,3 +26,8 @@ while True:
     with open ("database.txt", "r") as file:
         for line in file:
             print(f"{line.strip()}")
+    
+    # Opción rápida: el archivo se abre y se cierra inmediatamente, quedando vacío
+    with open("tu_archivo.txt", "w") as archivo:
+        pass 
+
