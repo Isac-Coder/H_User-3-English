@@ -54,3 +54,8 @@ while True:
     
     else:
         print("Invalid option\n")
+
+# This script uses persistence to store daily blockers in a file.
+# It allows the user to fetch stored data easily.
+# It prevents accidental overwrite of important information.
+# If an error occurs, I will reach out to the team for support.
